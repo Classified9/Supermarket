@@ -1,4 +1,4 @@
-package Shopping;
+package chapter4.Shopping;
 
 import java.util.Scanner;
 public class ShoppingPriceApp {
@@ -40,10 +40,32 @@ public class ShoppingPriceApp {
 
 
     public void iterate(){
-        String checkCondition;
+        String checkCondition = "yes";
+
+        //This both iterate methods works
+        //Feel free to use the while iteration or the do...while iteration
+        //To use: Comment out one and uncomment the other
+        //Happy Coding ;-)
+
+
+                                              //First Method
+
+//        iteratePrompt();
+//        checkCondition = scan.next();
+//        while (!checkCondition.equalsIgnoreCase("no")){
+//            prompt();
+//            collectingUserChoice();
+//            iteratePrompt();
+//            checkCondition = scan.next();
+//        }
+
+
+
+                                                //Second Method
+
         do {
             iteratePrompt();
-            checkCondition = scan.nextLine();
+            checkCondition = scan.next();
             if (checkCondition.equalsIgnoreCase("yes")){
                 prompt();
                 collectingUserChoice();
@@ -51,40 +73,32 @@ public class ShoppingPriceApp {
         }while (checkCondition.equalsIgnoreCase("yes"));
     }
 
+
     public void prompt(){
         System.out.print("""
                 Press 1 for book
                 Press 2 for bag
-                Press 3 for shoe
-                Press 99 to cancel :
+                Press 3 for shoe:
                  """);
     }
 
     public void collectingUserChoice (){
         userChoiceNumber = scan.nextInt();
-        switch (userChoiceNumber){
-            case 1 :
-                setBook();
-                break;
-            case 2 :
-                setBag();
-                break;
-            case 3:
-                setShoe();
-                break;
-            case 99 :
-                break;
-            default:
+        switch (userChoiceNumber) {
+            case 1 -> setBook();
+            case 2 -> setBag();
+            case 3 -> setShoe();
+            default -> {
                 System.out.println("Invalid input. Try again!");
                 prompt();
                 collectingUserChoice();
-                break;
+            }
         }
     }
 
     public void welcomeMessage(){
         System.out.println("Welcome to Sherif Shopping");
-        System.out.println("");
+        System.out.println("\n");
     }
 
 }

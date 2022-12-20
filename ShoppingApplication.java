@@ -1,9 +1,8 @@
-package Shopping;
+package chapter4.Shopping;
 
-import java.util.Scanner ;
 public class ShoppingApplication {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+       // Scanner scan = new Scanner(System.in);
         ShoppingPriceApp user = new ShoppingPriceApp();
 
         //welcome the user
@@ -16,7 +15,7 @@ public class ShoppingApplication {
         user.collectingUserChoice();
 
         //iterate prompt
-        user.iteratePrompt();
+        //user.iteratePrompt();
 
         //iterate
         user.iterate();
