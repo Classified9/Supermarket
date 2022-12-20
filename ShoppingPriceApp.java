@@ -42,8 +42,8 @@ public class ShoppingPriceApp {
     public void iterate(){
         String checkCondition = "yes";
 
-        //This both iterate methods works
-        //Feel free to use the while iteration or the do...while iteration
+        //Both iterate methods work
+        //Feel free to use the (while) iteration or the (do...while) iteration
         //To use: Comment out one and uncomment the other
         //Happy Coding ;-)
 
